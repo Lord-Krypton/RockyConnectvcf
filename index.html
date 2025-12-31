@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RockyConnectvcf- Owner</title>
+  <title>RockyConnect VCF - Owner</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -16,22 +16,37 @@
 
   <main class="relative z-10 max-w-5xl mx-auto px-6 py-16">
     <h1 class="text-5xl md:text-6xl font-bold text-center mb-4 text-gradient">
-      RockyConnectvcf
+      RockyConnect VCF
     </h1>
-    <p class="text-xl text-center text-slate-400 mb-12">Owner Dashboard</p>
+    <p class="text-xl text-center text-slate-400 mb-16">Owner Dashboard – Create & Manage Group Sessions</p>
 
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-16">
-      <div class="p-8 rounded-2xl card-glass border-glow shadow-glow">
-        <h2 class="text-2xl font-semibold mb-6 text-[var(--primary)]">Create New Session</h2>
-        <button id="createSession" class="w-full py-5 text-lg font-medium rounded-xl bg-gradient-to-r from-[var(--primary)] to-[#8b5cf6] hover:from-[#6d28d9] hover:to-[#7c3aed] shadow-lg transition transform hover:scale-105">
-          🚀 Create Session
+    <!-- Create Session Section -->
+    <div class="max-w-2xl mx-auto mb-20">
+      <div class="p-10 rounded-3xl card-glass border-glow shadow-glow text-center">
+        <h2 class="text-3xl font-bold mb-6 text-[var(--primary)]">Start a New Group Session</h2>
+        <p class="text-lg text-slate-300 mb-10">
+          Click below to create a unique link. Share it with your group members so they can add their contacts.
+        </p>
+        <button id="createSession" class="px-12 py-6 text-2xl font-bold rounded-2xl bg-gradient-to-r from-[var(--primary)] to-[#8b5cf6] hover:from-[#6d28d9] hover:to-[#7c3aed] shadow-2xl transition transform hover:scale-110">
+          🚀 Create New Session
         </button>
       </div>
     </div>
 
-    <h2 class="text-3xl font-bold mb-8 text-[var(--primary)]">Your Sessions</h2>
-    <div id="sessionsList" class="space-y-6">
-      <p class="text-center text-slate-500 py-12" id="noSessions">No sessions yet. Create one above!</p>
+    <!-- Sessions List -->
+    <h2 class="text-3xl font-bold mb-10 text-[var(--primary)] text-center">Your Active Sessions</h2>
+    <div id="sessionsList" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Sessions will appear here -->
+      <div id="noSessions" class="col-span-full">
+        <div class="p-16 rounded-3xl card-glass border-glow shadow-glow text-center">
+          <div class="text-6xl mb-6">📭</div>
+          <h3 class="text-2xl font-semibold mb-4 text-slate-300">No sessions yet</h3>
+          <p class="text-lg text-slate-400 mb-8">
+            Create your first session above to start collecting contacts for your group!
+          </p>
+          <div class="text-5xl animate-bounce">⬆</div>
+        </div>
+      </div>
     </div>
   </main>
 
