@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #7c3aed;
+  --primary-hover: #6d28d9;
+  --accent: #22d3ee;
+  --accent-hover: #06b6d4;
+  --bg-dark: #0f0f1a;
+  --card-bg: #1a1a2e;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --border-purple: rgba(167, 139, 250, 0.3);
+  --glow-purple: rgba(124, 58, 237, 0.3);
+  --glow-accent: rgba(34, 211, 238, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-glass {
+  background: rgba(26, 26, 46, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.border-glow {
+  border: 1px solid var(--border-purple);
+}
+
+.shadow-glow {
+  box-shadow: 0 20px 40px -10px rgba(124, 58, 237, 0.25);
+}
+
+input:focus, button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.4);
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
